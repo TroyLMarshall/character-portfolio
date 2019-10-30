@@ -1,0 +1,6 @@
+<p id="notice"><%= notice %></p>
+
+<h1><%= @character.name %></h1>
+
+<%= link_to translate("edit", scope: [:shared, :index]), edit_character_path(@character) %> |
+<%= link_to translate("back", scope: [:shared, :index]), characters_path %>

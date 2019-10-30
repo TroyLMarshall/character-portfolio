@@ -1,0 +1,5 @@
+<h1><%= translate(".title") %></h1>
+
+<%= render 'form', character: @character %>
+
+<%= link_to translate("back", scope: [:shared, :index]), characters_path %>

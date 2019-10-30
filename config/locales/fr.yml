@@ -1,0 +1,42 @@
+fr:
+  activerecord:
+    attributes:
+      character:
+        name: "Nom"
+    errors:
+      models:
+        character:
+          attributes:
+            name:
+              blank: "est requis"
+
+  characters:
+    edit:
+      title: "Personnage d'édition"
+    index:
+      new-character: "Nouveau personnage"
+      table-list-title: "Liste de personnages"
+      title: "Personnages"
+    new:
+      title: "Nouveau personnage"
+
+  helpers:
+    submit:
+      character:
+        create: "Créer un personnage"
+        update: "Mettre à jour le personnage"
+
+  layouts:
+    application:
+      title: "Portefeuille de personnages"
+
+  shared:
+    error: "erreur"
+
+    index:
+      actions: "Actions"
+      back: "Retour"
+      confirm: "Êtes-vous sûr?"
+      destroy: "Détruire"
+      edit: "Modifier"
+      show: "Spectacle"

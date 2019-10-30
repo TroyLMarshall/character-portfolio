@@ -1,0 +1,29 @@
+<p id="notice"><%= notice %></p>
+
+<h1><%= translate(".title") %></h1>
+
+<% if @characters.count > 0 %>
+<table title="<%= translate(".table-list-title") %>">
+  <thead>
+    <tr>
+      <th><%= Character.human_attribute_name("name") %></th>
+      <th id="character-actions" colspan="3"><%= translate("actions", scope: [:shared, :index]) %></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @characters.each do |character| %>
+      <tr>
+        <td><%= character.name %></td>
+        <td headers="character-actions"><%= link_to translate("show", scope: [:shared, :index]), character %></td>
+        <td headers="character-actions"><%= link_to translate("edit", scope: [:shared, :index]), edit_character_path(character) %></td>
+        <td headers="character-actions"><%= link_to translate("destroy", scope: [:shared, :index]), character, method: :delete, data: { confirm: translate("confirm", scope: [:shared, :index]) } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+<% end %>
+
+<%= link_to translate(".new-character"), new_character_path %>
