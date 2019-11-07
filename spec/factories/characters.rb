@@ -3,5 +3,6 @@
 FactoryBot.define do
   factory :character do
     name { Faker::Name.name }
+    association :user, factory: :seeded_user
   end
 end

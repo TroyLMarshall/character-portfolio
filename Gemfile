@@ -40,6 +40,9 @@ gem "bootsnap", ">= 1.4.2", require: false
 # Debug i18n translations. Read more: https://github.com/fphilipe/i18n-debug
 gem "i18n-debug", "~> 1.2.0", group: :development
 
+# Use Devise for authentication. Read more: https://github.com/plataformatec/devise
+gem "devise", "~> 4.7.1"
+
 group :development, :test do
   # Call "byebug" anywhere in the code to stop execution and get a debugger console
   # gem "byebug", platforms: [:mri, :mingw, :x64_mingw]

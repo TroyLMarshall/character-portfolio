@@ -20,6 +20,9 @@ Metrics/AbcSize:
   Exclude:
     - 'bin/**/*'
 
+Metrics/BlockLength:
+  Exclude:
+    - 'spec/**/*'
 Metrics/CyclomaticComplexity:
   Exclude:
     - 'bin/**/*'
@@ -28,6 +31,7 @@ Metrics/LineLength:
   Max: 120
   Exclude:
     - 'bin/bundle'
+    - 'config/initializers/devise.rb'
 
 Metrics/MethodLength:
   Exclude:
@@ -64,6 +68,9 @@ Style/ExpandPathArguments:
     - 'bin/**/*'
     - 'spec/rails_helper.rb'
 
+Style/FrozenStringLiteralComment:
+  Exclude:
+    - 'db/schema.rb'
 Style/IfUnlessModifier:
   Exclude:
     - 'bin/bundle'
@@ -88,7 +95,9 @@ Style/StderrPuts:
   Exclude:
     - 'bin/yarn'
 
-# Configuration parameters: EnforcedStyle, ConsistentQuotesInMultiline.
-# SupportedStyles: single_quotes, double_quotes
 Style/StringLiterals:
   EnforcedStyle: double_quotes
+
+Style/WordArray:
+  Exclude:
+    - 'db/schema.rb'

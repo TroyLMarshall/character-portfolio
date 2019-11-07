@@ -1,22 +1,28 @@
 # frozen_string_literal: true
 
+# Controller to manage Character CRUD operations
+#
+# @author Troy L. Marshall
+# @since 1.0.0
 class CharactersController < ApplicationController
   before_action :set_character, only: %i[show edit update destroy]
+  before_action :authenticate_user!
 
   # GET /characters
   # GET /characters.json
   def index
-    @characters = Character.all
+    @characters = current_user.characters.all
   end
 
   # GET /characters/1
   # GET /characters/1.json
   def show
+    @character = current_user.characters.find(params[:id])
   end
 
   # GET /characters/new
   def new
-    @character = Character.new
+    @character = current_user.characters.new
   end
 
   # GET /characters/1/edit
@@ -25,8 +31,9 @@ class CharactersController < ApplicationController
 
   # POST /characters
   # POST /characters.json
+  # rubocop:disable Metrics/AbcSize
   def create
-    @character = Character.new(character_params)
+    @character = current_user.characters.new(character_params)
 
     respond_to do |format|
       if @character.save
@@ -38,6 +45,7 @@ class CharactersController < ApplicationController
       end
     end
   end
+  # rubocop:enable Metrics/AbcSize
 
   # PATCH/PUT /characters/1
   # PATCH/PUT /characters/1.json
