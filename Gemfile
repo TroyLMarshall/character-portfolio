@@ -37,11 +37,40 @@ gem "jbuilder", "~> 2.7"
 # Reduces boot times through caching; required in config/boot.rb
 gem "bootsnap", ">= 1.4.2", require: false
 
-# Debug i18n translations. Read more: https://github.com/fphilipe/i18n-debug
-gem "i18n-debug", "~> 1.2.0", group: :development
-
 # Use Devise for authentication. Read more: https://github.com/plataformatec/devise
 gem "devise", "~> 4.7.1"
+
+group :development do
+  # Add bullet get to identify N+1 queries. Read more: https://github.com/flyerhzm/bullet
+  gem "bullet", "~> 6.0.2"
+
+  # Add guard to automate tasks. Read more: https://github.com/guard/guard
+  gem "guard", "~> 2.16.1"
+
+  # Add brakeman plugin. Read more: https://github.com/guard/guard-brakeman
+  gem "guard-brakeman", "~> 0.8.5"
+
+  # Add bundler plugin. Read more: https://github.com/guard/guard-bundler
+  gem "guard-bundler", "~> 2.2.1", require: false
+
+  # Add rspec plugin. Read more: https://github.com/guard/guard-rspec
+  gem "guard-rspec", "~> 4.7.3", require: false
+
+  # Add rubocop plugin. Read more: https://github.com/yujinakayama/guard-rubocop
+  gem "guard-rubocop", "~> 1.3.0"
+
+  # Add rubycritic plugin. Read more: https://github.com/whitesmith/guard-rubycritic
+  gem "guard-rubycritic", "~> 2.9.3"
+
+  # Add Yard plugin. Read more: https://github.com/panthomakos/guard-yard
+  gem "guard-yard", "~> 2.2.1"
+
+  # Debug i18n translations. Read more: https://github.com/fphilipe/i18n-debug
+  gem "i18n-debug", "~> 1.2.0"
+
+  # Use RubyCritic for code quality reporting. Read more: https://github.com/whitesmith/rubycritic
+  gem "rubycritic", "~> 4.2.1", require: false
+end
 
 group :development, :test do
   # Call "byebug" anywhere in the code to stop execution and get a debugger console
