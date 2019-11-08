@@ -34,7 +34,7 @@ yarn-debug.log*
 /coverage/*
 
 # Ignore brakeman report
-/brakeman/report.html
+/brakeman_report.html
 
 # Ignore .yardoc files
 .yardoc/*

@@ -22,7 +22,9 @@ Metrics/AbcSize:
 
 Metrics/BlockLength:
   Exclude:
+    - 'Guardfile'
     - 'spec/**/*'
+
 Metrics/CyclomaticComplexity:
   Exclude:
     - 'bin/**/*'
@@ -79,6 +81,10 @@ Style/NumericLiterals:
   Exclude:
     - 'db/schema.rb'
 
+Style/PercentLiteralDelimiters:
+  Exclude:
+    - 'Guardfile'
+
 Style/PerlBackrefs:
   Exclude:
     - 'bin/bundle'
@@ -86,6 +92,10 @@ Style/PerlBackrefs:
 Style/RedundantBegin:
   Exclude:
     - 'bin/yarn'
+
+Style/RegexpLiteral:
+  Exclude:
+    - 'Guardfile'
 
 Style/SpecialGlobalVars:
   Exclude:
@@ -97,6 +107,8 @@ Style/StderrPuts:
 
 Style/StringLiterals:
   EnforcedStyle: double_quotes
+  Exclude:
+    - 'Guardfile'
 
 Style/WordArray:
   Exclude:
